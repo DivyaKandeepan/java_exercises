@@ -1,0 +1,192 @@
+1)Shell script to display a message:
+
+echo "Welocome to Stack Route"
+
+2) shell script with a variable:
+
+message="Welcome to Stack Route"
+echo $message
+
+3)Shell script to check file path and permissions:
+
+file_path="/path/to/file.txt"
+
+if [ -e "$file_path" ]; then
+    echo "$file_path passwords are enabled ."
+if [ -w "$file_path" ]; then
+        echo "You have permissions to edit $file_path."
+    else
+        echo "You do not have permissions to edit $file_path."
+    fi
+4)Shell script to print file-related information in the current directory:
+
+for file in *; do
+    if [ -f "$file" ]; then
+        echo "File Name: $file"
+        echo "Size: $(du -sh "$file" | awk '{print $1}')"
+        echo "Permissions: $(stat -c %A "$file")"
+        echo "Owner: $(stat -c %U "$file")"
+        echo "Group: $(stat -c %G "$file")"
+        echo "Last Modified: $(stat -c %y "$file")"
+        echo "------------------------"
+    fi
+done
+
+5)a script that demonstrates remote login using SSH and file transfer using SCP
+
+#!/bin/bash
+
+remote_host="example.com"  # Replace with the remote host address
+remote_user="username"     # Replace with the remote username
+remote_password="password" # Replace with the remote user's password
+local_file="file.txt"      # Replace with the local file you want to transfer
+remote_directory="/path/to/destination/"  # Replace with the remote destination directory
+
+# SSH login and file transfer
+sshpass -p "$remote_password" ssh "$remote_user"@"$remote_host" "mkdir -p $remote_directory"
+sshpass -p "$remote_password" scp "$local_file" "$remote_user"@"$remote_host":"$remote_directory"
+
+6)script that prints the length of each string using arrays
+
+# Declare an array of strings
+strings=("Hello" "World"  "Script")
+
+# Iterate over each string in the array
+for string in "${strings[@]}"
+do
+    # Calculate the length of the string
+    length=${#string}
+    
+    # Print the string and its length
+    echo "String: $string, Length: $length"
+done
+
+7)script that converts a string to lowercase and uppercase
+
+#!/bin/bash
+
+# Function to convert string to lowercase
+to_lower() {
+    local input="$1"
+    local output
+    output=$(echo "$input" | tr '[:upper:]' '[:lower:]')
+    echo "$output"
+}
+# Function to convert string to uppercase
+to_upper() {
+    local input="$1"
+    local output
+    output=$(echo "$input" | tr '[:lower:]' '[:upper:]')
+    echo "$output"
+}
+# Usage: ./convert_case.sh <string>
+# Example: ./convert_case.sh "Hello World"
+
+input_string="$1"
+
+# Convert to lowercase
+lowercase=$(to_lower "$input_string")
+echo "Lowercase: $lowercase"
+
+# Convert to uppercase
+uppercase=$(to_upper "$input_string")
+echo "Uppercase: $uppercase"
+
+8)script to rename the current working directory with a given name:
+
+# Usage: ./rename_directory.sh <new_name>
+# Example: ./rename_directory.sh new_directory_name
+
+new_name="$1"
+
+# Get the current working directory
+current_dir=$(pwd)
+
+# Extract the parent directory and the current directory name
+parent_dir=$(dirname "$current_dir")
+old_name=$(basename "$current_dir")
+
+# Create the new directory path
+new_dir="$parent_dir/$new_name"
+
+# Rename the directory
+mv "$current_dir" "$new_dir"
+
+# Check if the renaming was successful
+if [ $? -eq 0 ]; then
+    echo "Directory renamed from '$old_name' to '$new_name'"
+else
+    echo "Failed to rename directory"
+fi
+
+9)script to rename a file or directory by replacing it with lower or uppercase letters:
+
+# Usage: ./rename_files.sh <file_or_directory_path> <case>
+# Example: ./rename_files.sh file.txt lowercase
+
+file_or_directory="$1"
+case_option="$2"
+
+# Check if the file or directory exists
+if [ -e "$file_or_directory" ]; then
+    # Get the parent directory and the file or directory name
+    parent_dir=$(dirname "$file_or_directory")
+    old_name=$(basename "$file_or_directory")
+
+    # Convert the case based on the provided option
+    case "$case_option" in
+        "lowercase")
+            new_name=$(echo "$old_name" | tr '[:upper:]' '[:lower:]')
+            ;;
+        "uppercase")
+            new_name=$(echo "$old_name" | tr '[:lower:]' '[:upper:]')
+            ;;
+        *)
+            echo "Invalid case option. Please specify 'lowercase' or 'uppercase'."
+            exit 1
+            ;;
+    esac
+
+    # Create the new file or directory path
+    new_path="$parent_dir/$new_name"
+
+    # Rename the file or directory
+    mv "$file_or_directory" "$new_path"
+
+    # Check if the renaming was successful
+    if [ $? -eq 0 ]; then
+        echo "File or directory renamed from '$old_name' to '$new_name'"
+    else
+        echo "Failed to rename file or directory"
+    fi
+else
+    echo "File or directory '$file_or_directory' does not exist."
+fi
+
+10) script to search for a user in your system:
+
+#!/bin/bash
+
+# Usage: ./search_user.sh <username>
+# Example: ./search_user.sh john
+
+username="$1"
+
+# Check if the username exists
+getent passwd "$username" > /dev/null
+
+# Check the exit status of the previous command
+if [ $? -eq 0 ]; then
+    echo "User '$username' exists in the system."
+else
+    echo "User '$username' does not exist in the system."
+fi
+
+
+
+
+
+
+
+
+

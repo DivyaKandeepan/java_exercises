@@ -1,0 +1,72 @@
+1) Quotient
+
+1. Accept the first number, num1
+2. Accept the second number, num2
+3. If num2 is equal to zero, display an error message and exit the program
+4. Divide num1 by num2 to get the quotient, quotient = num1 / num2
+5. Display the quotient
+
+2)km to m
+
+1. Accept the distance in kilometres, km
+2. Convert km to metres by multiplying with 1000, metres = km * 1000
+3. Display the result, "Distance in metres: ", metres
+
+3)sum & Average
+
+
+1. Accept 5 numbers, num1, num2, num3, num4, num5
+2. Calculate the sum of the numbers, sum = num1 + num2 + num3 + num4 + num5
+3. Calculate the average of the numbers, avg = sum / 5
+4. Display the sum and average of the numbers
+
+4)Odd or Even
+
+1.Accept the number,number
+2.If number%2==0, display Even
+3.Otherwise,display Odd
+
+5)highest number
+
+1. Accept the first number, num1
+2. Accept the second number, num2
+3. If num1 is greater than num2, display num1 as the highest number
+4. Otherwise, display num2 as the highest number
+
+6)area of a rectangle
+
+1. Accept the length of the rectangle, length
+2. Accept the width of the rectangle, width
+3. Calculate the area of the rectangle, area = length * width
+4. Display the area of the rectangle
+
+7) time taken
+
+1. Accept the distance of the journey, distance
+2. Accept the speed at which the journey is taken, speed
+3. Calculate the time taken for the journey, time = distance / speed
+4. Display the time taken for the journey
+
+8)vowels or consonant
+
+1. Accept a character, ch
+2. If ch is 'a', 'e', 'i', 'o', or 'u', display "vowel"
+3. Otherwise, display "consonant"
+
+9)highest number among three numbers
+
+1. Accept the first number, num1
+2. Accept the second number, num2
+3. Accept the third number, num3
+4. If num1 is greater than num2 and num1 is greater than num3, display num1 as the highest number
+5. If num2 is greater than num1 and num2 is greater than num3, display num2 as the highest number
+6. Otherwise, display num3 as the highest number
+
+10)determining if a user is a kid or senior citizen based on their age:
+
+1. Accept the age of the user, age
+2. If age is less than 18, display "kid"
+3. If age is greater than or equal to 60, display "senior citizen"
+4. Otherwise, display "adult"
+
+

@@ -1,0 +1,126 @@
+1)pseudocode for accepting radius and calculate the area of circle
+
+1. Input radius
+2. Set pi = 3.14159  // Assuming a constant value for pi
+3. Set area = pi * radius^2
+4. Output area
+
+2)Pseudocode for displaying the multiplication table of a given number:
+
+1. Input number
+2. Set counter = 1
+3. Repeat the following steps until counter is less than or equal to 10:
+     4. Set product = number * counter
+     5. Output number + " * " + counter + " = " + product
+     6. Increment counter by 1
+7. End
+
+3)Pseudocode for checking whether a given number is perfect or not
+
+1. Input number
+2. Set sum = 0
+3. Set divisor = 1
+4. Repeat the following steps until divisor is less than number:
+     5. If number modulo divisor is equal to 0, then:
+          6. Add divisor to sum
+     7. Increment divisor by 1
+8. If sum is equal to number, then:
+     9. Output "The number is perfect"
+   Else:
+     10. Output "The number is not perfect"
+11. End
+
+
+4)Pseudocode for finding the lowest number out of three numbers:
+
+1. Input num1, num2, num3
+2. Set min = num1
+3. If num2 is less than min, then:
+     4. Set min = num2
+5. If num3 is less than min, then:
+     6. Set min = num3
+7. Output min
+8. End
+
+5)Pseudocode for swapping two numbers without using a third variable:
+
+1. Input num1, num2
+2. Set num1 = num1 + num2
+3. Set num2 = num1 - num2
+4. Set num1 = num1 - num2
+5. Output num1, num2
+6. End
+
+6) Pseudocode for checking whether a number is a perfect square or not
+
+1. Input number
+2. Set squareRoot = square root of number (rounded to the nearest integer)
+3. Set square = squareRoot * squareRoot
+4. If square is equal to number, then:
+     5. Output "The number is a perfect square"
+   Else:
+     6. Output "The number is not a perfect square"
+7. End
+
+7)Pseudocode for accepting a number from 1 to 7 and displaying the name of the week:
+
+1. Input number
+2. If number is 1, then:
+     3. Output "Monday"
+   Else if number is 2, then:
+     4. Output "Tuesday"
+   Else if number is 3, then:
+     5. Output "Wednesday"
+   Else if number is 4, then:
+     6. Output "Thursday"
+   Else if number is 5, then:
+     7. Output "Friday"
+   Else if number is 6, then:
+     8. Output "Saturday"
+   Else if number is 7, then:
+     9. Output "Sunday"
+   Else:
+     10. Output "Invalid input"
+11. End
+
+8)Pseudocode for implementing a menu-driven calculator:
+
+1. Output "1. Addition"
+2. Output "2. Subtraction"
+3. Output "3. Multiplication"
+4. Output "4. Division"
+5. Input choice
+6. Input num1, num2
+7. If choice is 1, then:
+    
+9)pseudocode for accepting student details, calculating the total and percentage, and displaying the pass or fail result based on the percentage:
+
+1. Input student_id
+2. Input student_name
+3. Input student_age
+4. Input mark1, mark2, mark3
+5. Set total = mark1 + mark2 + mark3
+6. Set percentage = (total / 300) * 100
+7. If percentage > 50, then:
+     8. Output "Result: Pass"
+   Else:
+     9. Output "Result: Fail"
+10. End
+
+10)pseudocode for printing the Fibonacci series up to 100
+
+1. Set first = 0
+2. Set second = 1
+3. Print the first number of the series
+4. Print the second number of the series
+5. Set next = first + second  // Calculate the next number in the series
+6. Repeat the following steps until next is less than or equal to 100:
+     7. Output next  // Print the next number in the series
+     8. Set first = second
+     9. Set second = next
+     10. Set next = first + second
+11. End
+
+
+
+
